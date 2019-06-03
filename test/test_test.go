@@ -9,6 +9,7 @@ func TestMain(m *testing.M) {
 	println("end")
 }
 
+//测试普通函数和方法
 func Test1(t *testing.T) {
 	println("test1")
 
@@ -16,4 +17,9 @@ func Test1(t *testing.T) {
 
 func Test2(t *testing.T) {
 	println("test2")
+}
+
+func Test3(t *testing.T) {
+	print(testing.Short())
+
 }
