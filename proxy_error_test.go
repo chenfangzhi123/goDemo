@@ -2,6 +2,8 @@ package main
 
 import (
 	"io/ioutil"
+	"testing"
+
 	//"fmt"
 	"net"
 	//"os"
@@ -14,7 +16,8 @@ const (
 	port = 8899
 )
 
-func main() {
+// 网上的一个错误代码示例
+func TestProxy(t *testing.T) {
 	listen, err := net.ListenTCP("tcp", &net.TCPAddr{IP: net.ParseIP(ip), Port: port})
 	if err != nil {
 		log.Println("监听端口失败:", err.Error())

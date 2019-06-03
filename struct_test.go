@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type s struct {
 	a int
@@ -10,7 +13,7 @@ type s struct {
 /**
 测试接口赋值是引用复制还是拷贝，结果为拷贝
 */
-func main() {
+func TestStruct(t *testing.T) {
 	type i interface{}
 	v := s{a: 2}
 	var j i = &v

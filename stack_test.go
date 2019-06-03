@@ -1,13 +1,16 @@
 package main
+
 import (
 	"fmt"
 	"os"
 	"os/signal"
 	"runtime"
 	"syscall"
+	"testing"
 	"time"
 )
-func main() {
+
+func TestStack(t *testing.T) {
 	setupSigusr1Trap()
 	go a()
 	m1()
